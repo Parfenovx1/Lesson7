@@ -13,7 +13,7 @@ function tryToGuess(){
 function isNumbersCoincide(){
   do{
     tryToGuess();
-    if(number == user){
+    if(number === user){
       console.clear();
       console.log("Correct!!!");
       return;
