@@ -8,7 +8,7 @@ function tryToGuess(user){
   this.user = user;
 }
 
-function guessAndCheck(){   
+function isNumbersCoincide(){   
   do{
     tryToGuess(prompt("Try to guess a number from 1 to 10:"));
     if(this.user === null){
@@ -24,6 +24,7 @@ function guessAndCheck(){
     console.clear()
     console.log("Wrong. Try again!")
   }while(this.user != this.number)
-} 
-guessAndCheck();
+}
+isNumbersCoincide();
+
 
