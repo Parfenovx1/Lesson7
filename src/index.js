@@ -1,30 +1,29 @@
-function getRandomNumber(number){
-  this.number = number;
-  console.log(number);
+function getRandomNumber(){
+  return Math.ceil(Math.random() * 10);
 }
-getRandomNumber(Math.ceil(Math.random() * 10));   // подсказка, что бы долго не угадывать 
-
-function tryToGuess(user){
-  this.user = user;
-}
-
-function isNumbersCoincide(){   
+   
+function isNumbersCoincide(){ 
+  var randomNumber = getRandomNumber();
+  console.log(randomNumber);  
   do{
-    tryToGuess(prompt("Try to guess a number from 1 to 10:"));
-    if(this.user === null){
+    user = prompt("Try to guess a number from 1 to 10:");
+    if(user === null){
       console.clear();
       console.log("You canceled the game.")
       return;
       }
-    if(Number(this.user) == this.number){
+    if(Number(user) === randomNumber){
       console.clear();
       console.log("Correct!!!");
       return;
     }
     console.clear()
     console.log("Wrong. Try again!")
-  }while(this.user != this.number)
+  }while(user !== randomNumber)
 }
 isNumbersCoincide();
+
+
+
 
 
